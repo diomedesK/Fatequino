@@ -1,5 +1,7 @@
-Flask==1.0.2
-ChatterBot==1.0.4
+chatterbot==1.0.4
 chatterbot-corpus==1.2.0
-flask-cors==3.0.10
-pymongo==3.10.1
+flask-cors==4.0.0
+pip-chill==1.0.3
+flask==3.0.0
+pytz==2023.3.post1
+requests==2.31.0

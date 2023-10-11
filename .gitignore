@@ -109,6 +109,8 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+Interacao 1/interacao-1-env-3-8/
+Interacao 1/.vim/
 
 # Spyder project settings
 .spyderproject
