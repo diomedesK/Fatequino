@@ -9,7 +9,7 @@ import json
 app = Flask(__name__)
 CORS(app)
 
-data = json.loads(open('conversas.json', 'r', encoding='utf-8').read())
+data = json.loads(open('./data/conversas.json', 'r', encoding='utf-8').read())
 trainn = []
 
 for row in data:

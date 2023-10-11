@@ -8,7 +8,7 @@ class FatequinoChatbot():
         self.bot = bot
         self.trainer = Trainer(self.bot)
         # carrega conversas que o bot ja entende
-        self.conversas = json.loads(open('conversas.json', 'r').read())
+        self.conversas = json.loads(open('./data/conversas.json', 'r').read())
         self.conversasDesconhecidas = []
 
     def treinarBot(self, conversa):
@@ -28,7 +28,7 @@ class FatequinoChatbot():
             # grava as conversas que o bot nao sabe responder em um arquivo
             if not (mensagemRecebida in self.conversas):
                 self.conversasDesconhecidas.append(mensagemRecebida)
-                with open('conversasSemResposta.json', 'w', encoding='utf-8') as gravarConversa:
+                with open('./data/conversasSemResposta.json', 'w', encoding='utf-8') as gravarConversa:
                     json.dump(self.conversasDesconhecidas, gravarConversa, ensure_ascii=False, indent=4, separators=(',', ':'))
                 return "Ainda não sei te responder sobre isso, mas irei pesquisar para conseguir te responder."
 
