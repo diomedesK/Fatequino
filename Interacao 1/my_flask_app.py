@@ -9,7 +9,7 @@ import json
 app = Flask(__name__)
 CORS(app)
 
-data = json.loads(open('conversas.json', 'r', encoding='utf-8').read())
+data = json.loads(open('./data/conversas.json', 'r', encoding='utf-8').read())
 trainn = []
 
 for row in data:
@@ -21,11 +21,11 @@ bot = ChatBot('Fatequino Chat Bot',
     storage_adapter='chatterbot.storage.MongoDatabaseAdapter',
     logic_adapters=[ 
         'chatterbot.logic.BestMatch',
-        {'import_path': 'disciplinaAdapter.DisciplinaAdapter'},
-        {'import_path': 'DiaAdapter.DiaAdapter'}  ,
-        {'import_path': 'professorAdapter.ProfessorAdapter'}  ,
-        {'import_path': "HorariosLocaisAdapter.HorariosLocaisAdapter"},
-        {'import_path': "ArquivoAdapter.ArquivoAdapter"}
+        {'import_path': 'adapter.DisciplinaAdapter.DisciplinaAdapter'},
+        {'import_path': 'adapter.DiaAdapter.DiaAdapter'}  ,
+        {'import_path': 'adapter.ProfessorAdapter.ProfessorAdapter'}  ,
+        {'import_path': "adapter.HorariosLocaisAdapter.HorariosLocaisAdapter"},
+        {'import_path': "adapter.ArquivoAdapter.ArquivoAdapter"}
     ],
     filters=[ 'chatterbot.filters.RepetitiveResponseFilter' ],
     input_adapter='chatterbot.input.TerminalAdapter',
