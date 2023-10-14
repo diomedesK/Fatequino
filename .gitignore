@@ -111,6 +111,9 @@ env.bak/
 venv.bak/
 Interacao 1/interacao-1-env-3-8/
 Interacao 1/.vim/
+Embedded/embedded-env/
+Embedded/.vim/
+tags
 
 # Spyder project settings
 .spyderproject
